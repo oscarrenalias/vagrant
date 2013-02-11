@@ -1,0 +1,6 @@
+[submodule "postgresql/modules"]
+	path = postgresql/modules
+	url = git@github.com:oscarrenalias/puppet.git
+[submodule "redis/modules"]
+	path = redis/modules
+	url = https://github.com/oscarrenalias/puppet.git
