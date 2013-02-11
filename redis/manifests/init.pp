@@ -1,3 +1,3 @@
 class { 'base': } ->
 class { 'gcc': } ->
-class { 'redis': }
+class { 'redis': version => '2.6.5', }

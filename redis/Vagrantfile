@@ -1,6 +1,5 @@
 Vagrant::Config.run do |config|
   config.vm.box = "centos63-minimal"
-
   config.vm.box_url = "https://dl.dropbox.com/u/217341/vagrant/CentOS-6.3-x86_64-v20130101.box"
 
   config.vm.network :hostonly, "192.168.33.11"
