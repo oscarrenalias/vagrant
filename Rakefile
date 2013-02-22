@@ -28,8 +28,7 @@ end
 
 desc "Initializes all modules"
 task :bootstrap do |t|
-  print "Initializing git submodules... "
-
+  puts "Initializing top-level git submodules... ".green
   system "git submodule init && git submodule update"
 
   # all modules also have submodules, so they need to be initialized
