@@ -34,7 +34,7 @@ task :bootstrap do |t|
   # all modules also have submodules, so they need to be initialized
   Dir.glob("*") do |d|
     if File.directory?(d)
-      if File.exists?("#{d}/Vagrantfile") && File.exists?("#{d}/modules")
+      if File.exists?("#{d}/Vagrantfile") && File.directory?("#{d}/modules")
         # It's a vagrant template
         puts "Initializing modules for VM #{d}".green
         system "cd #{d}/modules && git submodule init && git submodule update"
