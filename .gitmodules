@@ -4,3 +4,6 @@
 [submodule "redis/modules"]
 	path = redis/modules
 	url = https://github.com/oscarrenalias/puppet.git
+[submodule "blank/modules"]
+	path = blank/modules
+	url = https://github.com/oscarrenalias/puppet.git
