@@ -1,7 +1,8 @@
 class { "base": } ->
+class { "wget": } ->
 class { "java":
   type => "jdk",
-  version => "1.7.0",
+  install_maven => true,
 } ->
 class { "jenkins_node": }
 
