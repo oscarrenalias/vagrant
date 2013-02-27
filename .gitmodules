@@ -10,3 +10,6 @@
 [submodule "jenkins/modules"]
 	path = jenkins/modules
 	url = https://github.com/oscarrenalias/puppet.git
+[submodule "memcache/modules"]
+	path = memcache/modules
+	url = https://github.com/oscarrenalias/puppet.git
