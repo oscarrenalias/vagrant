@@ -13,3 +13,6 @@
 [submodule "memcache/modules"]
 	path = memcache/modules
 	url = https://github.com/oscarrenalias/puppet.git
+[submodule "mongodb/modules"]
+	path = mongodb/modules
+	url = https://github.com/oscarrenalias/puppet.git
