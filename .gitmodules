@@ -16,3 +16,6 @@
 [submodule "mongodb/modules"]
 	path = mongodb/modules
 	url = https://github.com/oscarrenalias/puppet.git
+[submodule "nodejs/modules"]
+	path = nodejs/modules
+	url = https://github.com/oscarrenalias/puppet.git
