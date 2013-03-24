@@ -1,10 +1,13 @@
-Some VM definitions for Vagrant.
+Some VM definitions for Vagrant, using my own Puppet modules for provisioning.
 
-Some of the VMs contain submodules (and some even submodules in the submodules), make sure to run the following commands in case of missing content:
+== Getting started ==
+Some of the VMs contain submodules (and some even submodules in the submodules), but the "bootstrap" command will take care of all that.
 
-git submodule init
-git submodule update
+The bootstrap command requires Ruby and Rake to be installed.
 
-Then, run the same in each one of the templates to intialize the submodules within the submodules (the parent repository at https://github.com/oscarrenalias/puppet has submodules of its own)
+== Developing new Vagrant definitions ==
+Use the "new" command:
 
-Alternativel, run the "bootstrap" rake task to do it all automatically (or use the boostrap script), but rake must be available in the system for it to work.
+./new my-new-vagrant-vm
+
+The command will automatically configure the Vagrantfile and create the starting Puppet manifests.
