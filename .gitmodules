@@ -1,0 +1,24 @@
+[submodule "postgresql/modules"]
+	path = postgresql/modules
+	url = git@github.com:oscarrenalias/puppet.git
+[submodule "redis/modules"]
+	path = redis/modules
+	url = https://github.com/oscarrenalias/puppet.git
+[submodule "blank/modules"]
+	path = blank/modules
+	url = https://github.com/oscarrenalias/puppet.git
+[submodule "jenkins/modules"]
+	path = jenkins/modules
+	url = https://github.com/oscarrenalias/puppet.git
+[submodule "memcache/modules"]
+	path = memcache/modules
+	url = https://github.com/oscarrenalias/puppet.git
+[submodule "mongodb/modules"]
+	path = mongodb/modules
+	url = https://github.com/oscarrenalias/puppet.git
+[submodule "nodejs/modules"]
+	path = nodejs/modules
+	url = https://github.com/oscarrenalias/puppet.git
+[submodule "cassandra/modules"]
+	path = cassandra/modules
+	url = https://github.com/oscarrenalias/puppet.git
