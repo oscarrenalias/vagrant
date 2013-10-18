@@ -1,13 +1,40 @@
 Vagrant::Config.run do |config|
-  config.vm.box = "centos63-minimal"
-  config.vm.box_url = "https://dl.dropbox.com/u/217341/vagrant/CentOS-6.3-x86_64-v20130101.box"
+  
+	config.vm.define :node1 do |node1_config|
+	  node1_config.vm.box = "centos63-minimal"
+	  node1_config.vm.box_url = "https://dl.dropbox.com/u/217341/vagrant/CentOS-6.3-x86_64-v20130101.box"
 
-  config.vm.network :hostonly, "192.168.33.44"
+	  node1_config.vm.network :hostonly, "192.168.33.144"
 
-  config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "manifests"
-    puppet.manifest_file  = "init.pp"
-    puppet.module_path    = "modules"
-  end
+	  node1_config.vm.provision :puppet do |puppet|
+	    puppet.manifests_path = "manifests"
+	    puppet.manifest_file  = "init.pp"
+	    puppet.module_path    = "modules"
+	    puppet.facter 		  = {
+	    	"vagrant" => "1",
+	    	"listen_address" => "192.168.33.144",
+	    	"rpc_address" => "192.168.33.144"
+	    }
+	  end
+	end
+
+	config.vm.define :node2 do |node2_config|
+	  node2_config.vm.box = "centos63-minimal"
+	  node2_config.vm.box_url = "https://dl.dropbox.com/u/217341/vagrant/CentOS-6.3-x86_64-v20130101.box"
+
+	  node2_config.vm.network :hostonly, "192.168.33.145"
+
+	  node2_config.vm.provision :puppet do |puppet|
+	    puppet.manifests_path = "manifests"
+	    puppet.manifest_file  = "init.pp"
+	    puppet.module_path    = "modules"
+	    puppet.facter 		  = {
+	    	"vagrant" => "1",
+	    	"listen_address" => "192.168.33.145",
+	    	"rpc_address" => "192.168.33.145",
+	    	"seed_nodes" => "192.168.33.144"
+	    }
+	  end
+	end
 
 end
