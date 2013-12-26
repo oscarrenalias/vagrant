@@ -1,0 +1,10 @@
+Vagrant::Config.run do |config|
+  config.vm.box = "saucy64"
+  config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-amd64-vagrant-disk1.box"
+
+  config.vm.network :hostonly, "192.168.33.99"
+
+  # Use shell provisioning since Puppet isn't available in this image
+  config.vm.provision "shell", path: "./provisioning/docker.sh"
+
+end
