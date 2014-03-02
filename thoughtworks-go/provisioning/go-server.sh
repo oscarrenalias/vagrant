@@ -1,3 +1,7 @@
+#
+# Sets up a Go server including the server itself, an agent, git and maven so that it's ready to
+# go after the VM is ready
+#
 echo Downloading Go server and agent...
 cd /tmp && curl -O http://download01.thoughtworks.com/go/13.4.1/ga/go-server-13.4.1-18342.noarch.rpm
 cd /tmp && curl -O http://download01.thoughtworks.com/go/13.4.1/ga/go-agent-13.4.1-18342.noarch.rpm
